@@ -1,0 +1,746 @@
+{
+  "name": "high_fidelity_onboarding_",
+  "version": 33,
+  "source-key": {
+    "type": "figma",
+    "file": "Hhxctd8m1rE1Fsv65VNlIh",
+    "node": "2402:232",
+    "version": "2172779327133629300",
+    "component-id": "375a1b902d6be3294d6036320ef7faa6848f16c8"
+  },
+  "default": "High-Fidelity ( Onboarding )",
+  "documentation": "Welcome screen coffee app\n",
+  "design": {
+    "atoms": [
+      {
+        "type": "group",
+        "id": "top_level",
+        "root": "true"
+      },
+      {
+        "type": "group",
+        "id": "Image Onboarding"
+      },
+      {
+        "type": "group",
+        "id": "Container"
+      },
+      {
+        "type": "group",
+        "id": "Iphone"
+      },
+      {
+        "type": "group",
+        "id": "Iphone1"
+      },
+      {
+        "type": "group",
+        "id": "Image"
+      },
+      {
+        "type": "image",
+        "id": "Image/Coffee/6"
+      },
+      {
+        "type": "vector",
+        "id": "Shadow Container"
+      },
+      {
+        "type": "group",
+        "id": "Button"
+      },
+      {
+        "type": "group",
+        "id": "Text"
+      },
+      {
+        "type": "text",
+        "id": "Get Started"
+      },
+      {
+        "type": "text",
+        "id": "Fall in Love with Coffee in Blissful Delight!"
+      },
+      {
+        "type": "text",
+        "id": "Welcome to our cozy coffee corner, where every cup is a delightful for you."
+      },
+      {
+        "type": "vector",
+        "id": "Home Indicator"
+      },
+      {
+        "type": "group",
+        "id": "Right Side"
+      },
+      {
+        "type": "group",
+        "id": "Left Side"
+      },
+      {
+        "type": "group",
+        "id": "Battery"
+      },
+      {
+        "type": "group",
+        "id": "Recording Indicator"
+      },
+      {
+        "type": "vector",
+        "id": "Rectangle"
+      },
+      {
+        "type": "vector",
+        "id": "Combined Shape"
+      },
+      {
+        "type": "vector",
+        "id": "Rectangle1"
+      },
+      {
+        "type": "vector",
+        "id": "Indicator"
+      },
+      {
+        "type": "group",
+        "id": "Time"
+      },
+      {
+        "type": "vector",
+        "id": "9:41"
+      }
+    ],
+    "modes": {
+      "High-Fidelity ( Onboarding )": {
+        "rules": [
+          {
+            "id": "top_level",
+            "is-structured": false,
+            "children": [
+              "Image Onboarding",
+              "Container",
+              "Iphone",
+              "Iphone1"
+            ],
+            "background-color": {
+              "alpha": 1.0,
+              "hue": 0.0,
+              "saturation": 0.0,
+              "value": 0.9725490196078431
+            }
+          },
+          {
+            "id": "Image Onboarding",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": 0.0
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": 0.0
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": 375.0
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": 536.0
+              }
+            },
+            "is-structured": false,
+            "children": [
+              "Image"
+            ],
+            "background-color": {
+              "alpha": 1.0,
+              "hue": 0.0,
+              "saturation": 0.0,
+              "value": 1.0
+            }
+          },
+          {
+            "id": "Container",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": 0.0
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": 452.0
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": 375.0
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": 360.0
+              }
+            },
+            "is-structured": false,
+            "children": [
+              "Shadow Container",
+              "Button",
+              "Text"
+            ],
+            "clip-content": false
+          },
+          {
+            "id": "Iphone",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": 0.0
+              },
+              "vertical": {
+                "attachment": "end",
+                "offset": 0.0
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": 375.0
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": 34.0
+              }
+            },
+            "is-structured": false,
+            "children": [
+              "Home Indicator"
+            ],
+            "clip-content": false
+          },
+          {
+            "id": "Iphone1",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": 0.0
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": 0.0
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": 375.0
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": 44.0
+              }
+            },
+            "is-structured": false,
+            "children": [
+              "Right Side",
+              "Left Side"
+            ]
+          },
+          {
+            "id": "Image",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": -0.5
+              },
+              "vertical": {
+                "attachment": "end",
+                "offset": 0.0
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": 468.0
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": 702.0
+              }
+            },
+            "is-structured": false,
+            "children": [
+              "Image/Coffee/6"
+            ],
+            "clip-content": false
+          },
+          {
+            "id": "Image/Coffee/6",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": 47.0
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": 166.0
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": 1.0
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": 1.0
+              }
+            },
+            "image-content": "image_coffee_6.png",
+            "scale": "cover"
+          },
+          {
+            "id": "Shadow Container",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": 0.0
+              },
+              "vertical": {
+                "attachment": "end",
+                "offset": 0.0
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": 375.0
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": 360.0
+              }
+            },
+            "vector-content": "shadow_container.svg"
+          },
+          {
+            "id": "Button",
+            "padding": {
+              "left": 20.0,
+              "top": 16.0,
+              "right": 20.0,
+              "bottom": 16.0
+            },
+            "border-radius": 16.0,
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": 24.0
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": 250.0
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": 327.0
+              },
+              "height-constraints": {
+                "sizing-mode": "shrink"
+              }
+            },
+            "arrangement": "row",
+            "children": [
+              "Get Started"
+            ],
+            "item-spacing": 10.0,
+            "background-color": {
+              "alpha": 1.0,
+              "hue": 22.999999999999996,
+              "saturation": 0.6060606060606061,
+              "value": 0.7764705882352941
+            },
+            "clip-content": false
+          },
+          {
+            "id": "Text",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": 24.0
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": 24.0
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "shrink"
+              },
+              "height-constraints": {
+                "sizing-mode": "shrink"
+              }
+            },
+            "main-axis-align": "start",
+            "children": [
+              "Fall in Love with Coffee in Blissful Delight!",
+              "Welcome to our cozy coffee corner, where every cup is a delightful for you."
+            ],
+            "item-spacing": 8.0,
+            "clip-content": false
+          },
+          {
+            "id": "Get Started",
+            "font-weight": 600.0,
+            "color": {
+              "alpha": 1.0,
+              "hue": 0.0,
+              "saturation": 0.0,
+              "value": 1.0
+            },
+            "text-content": "Get Started",
+            "overflow": "visible",
+            "text-align": "left",
+            "text-size": 16.0,
+            "line-height": 1.5,
+            "typeface": "Sora"
+          },
+          {
+            "id": "Fall in Love with Coffee in Blissful Delight!",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": 327.0
+              },
+              "height-constraints": {
+                "sizing-mode": "shrink"
+              }
+            },
+            "font-weight": 600.0,
+            "color": {
+              "alpha": 1.0,
+              "hue": 0.0,
+              "saturation": 0.0,
+              "value": 1.0
+            },
+            "text-content": "Fall in Love with Coffee in Blissful Delight!",
+            "overflow": "visible",
+            "max-lines": -1,
+            "text-size": 32.0,
+            "letter-spacing": 0.16,
+            "line-height": 1.5,
+            "typeface": "Sora"
+          },
+          {
+            "id": "Welcome to our cozy coffee corner, where every cup is a delightful for you.",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": 327.0
+              },
+              "height-constraints": {
+                "sizing-mode": "shrink"
+              }
+            },
+            "color": {
+              "alpha": 1.0,
+              "hue": 0.0,
+              "saturation": 0.0,
+              "value": 0.6352941176470588
+            },
+            "text-content": "Welcome to our cozy coffee corner, where every cup is a delightful for you.",
+            "overflow": "visible",
+            "max-lines": -1,
+            "letter-spacing": 0.14,
+            "line-height": 1.5,
+            "typeface": "Sora"
+          },
+          {
+            "id": "Home Indicator",
+            "border-radius": 100.0,
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": 0.5
+              },
+              "vertical": {
+                "attachment": "end",
+                "offset": -8.0
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": 134.0
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": 5.0
+              }
+            },
+            "vector-content": "home_indicator.svg"
+          },
+          {
+            "id": "Right Side",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": 283.6666564941406
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": 17.3306884765625
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": 66.661376953125
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": 11.336018562316895
+              }
+            },
+            "is-structured": false,
+            "children": [
+              "Battery",
+              "Recording Indicator"
+            ],
+            "clip-content": false
+          },
+          {
+            "id": "Left Side",
+            "border-radius": 32.0,
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": 12.0
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": 12.0
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": 52.0
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": 21.0
+              }
+            },
+            "is-structured": false,
+            "children": [
+              "Time"
+            ],
+            "clip-content": false
+          },
+          {
+            "id": "Battery",
+            "margin": {
+              "left": 42.333343505859375,
+              "top": 0.002685546875
+            },
+            "is-structured": false,
+            "children": [
+              "Rectangle",
+              "Combined Shape",
+              "Rectangle1"
+            ],
+            "clip-content": false
+          },
+          {
+            "id": "Recording Indicator",
+            "presence": false,
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": 14.3333740234375
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": -9.33056640625
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": 6.0
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": 6.0
+              }
+            },
+            "is-structured": false,
+            "children": [
+              "Indicator"
+            ],
+            "clip-content": false
+          },
+          {
+            "id": "Rectangle",
+            "border-radius": 2.6666667461395264,
+            "alignment": {
+              "horizontal": {
+                "attachment": "end",
+                "offset": -2.3280372619628906
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": 0.0
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": 22.0
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": 11.333333015441895
+              }
+            },
+            "vector-content": "rectangle.svg"
+          },
+          {
+            "id": "Combined Shape",
+            "alignment": {
+              "horizontal": {
+                "attachment": "end",
+                "offset": 7.152557373046875e-7
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": 3.666666030883789
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": 1.328037977218628
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": 4.0
+              }
+            },
+            "vector-content": "combined_shape.svg"
+          },
+          {
+            "id": "Rectangle1",
+            "border-radius": 1.3333333730697632,
+            "alignment": {
+              "horizontal": {
+                "attachment": "end",
+                "offset": -4.328037261962891
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": 2.0
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": 18.0
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": 7.333333492279053
+              }
+            },
+            "vector-content": "rectangle1.svg"
+          },
+          {
+            "id": "Indicator",
+            "alignment": {
+              "horizontal": {
+                "attachment": "end",
+                "offset": 0.0
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": 0.0
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": 6.0
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": 6.0
+              }
+            }
+          },
+          {
+            "id": "Time",
+            "border-radius": 32.0,
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": 52.0
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": 21.0
+              }
+            },
+            "stroke-alignment": "center",
+            "is-structured": false,
+            "children": [
+              "9:41"
+            ],
+            "clip-content": false
+          },
+          {
+            "id": "9:41",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": 12.0
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": 4.0
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": 28.0
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": 12.0
+              }
+            },
+            "vector-content": "9_41.svg"
+          }
+        ]
+      }
+    }
+  },
+  "previews": [
+    {
+      "design": "High-Fidelity ( Onboarding )",
+      "size": {
+        "width": 375.0,
+        "height": 812.0
+      }
+    }
+  ],
+  "adin-component-search-paths": [],
+  "image-search-paths": [],
+  "vector-search-paths": []
+}
