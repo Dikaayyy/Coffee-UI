@@ -12,8 +12,11 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.requiredHeight
 import androidx.compose.foundation.layout.requiredSize
+import androidx.compose.foundation.layout.requiredWidth
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
@@ -134,8 +137,8 @@ fun CoffeeAppUI() {
                         style = TextStyle(fontSize = 14.sp)
                     )
                 }
-
-                // Icon Row
+                Spacer(modifier = Modifier.width(4.dp))
+                // filter button
                 Row(
                     horizontalArrangement = Arrangement.spacedBy(10.dp, Alignment.CenterHorizontally),
                     verticalAlignment = Alignment.CenterVertically,
@@ -229,15 +232,16 @@ fun CoffeeItem(name: String, type: String, price: String, imageResId: Int) {
             contentDescription = null,
             contentScale = ContentScale.Crop,
             modifier = Modifier
-                .height(120.dp)
+                .requiredHeight(128.dp)
+                .requiredWidth(140.dp)
                 .fillMaxWidth()
                 .clip(RoundedCornerShape(15.dp))
         )
         Spacer(modifier = Modifier.height(8.dp))
         Text(name, fontWeight = FontWeight.Bold, fontSize = 16.sp)
-        Spacer(modifier = Modifier.height(4.dp))
-        Text(type, color = Color.Gray, fontSize = 12.sp)
         Spacer(modifier = Modifier.height(6.dp))
+        Text(type, color = Color.Gray, fontSize = 12.sp)
+        Spacer(modifier = Modifier.height(8.dp))
         Row(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceBetween,
