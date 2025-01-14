@@ -2,19 +2,30 @@ package com.example.coffe.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import com.example.coffe.R
+
+
+val soraFontFamily = FontFamily(
+    Font(R.font.sora_regular),
+    Font(R.font.sora_medium, FontWeight.W500),
+    Font(R.font.sora_semibold, FontWeight.W600),
+    Font(R.font.sora_bold, FontWeight.Bold)
+)
 
 // Set of Material typography styles to start with
 val Typography = Typography(
     bodyLarge = TextStyle(
-        fontFamily = FontFamily.Default,
+        fontFamily = soraFontFamily,
         fontWeight = FontWeight.Normal,
         fontSize = 16.sp,
         lineHeight = 24.sp,
         letterSpacing = 0.5.sp
     )
+)
     /* Other default text styles to override
     titleLarge = TextStyle(
         fontFamily = FontFamily.Default,
@@ -31,4 +42,3 @@ val Typography = Typography(
         letterSpacing = 0.5.sp
     )
     */
-)

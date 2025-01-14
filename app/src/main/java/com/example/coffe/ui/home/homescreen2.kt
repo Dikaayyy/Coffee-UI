@@ -12,12 +12,16 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.requiredHeight
 import androidx.compose.foundation.layout.requiredSize
+import androidx.compose.foundation.layout.requiredWidth
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
@@ -32,15 +36,22 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.em
 import androidx.compose.ui.unit.sp
 import com.example.coffe.R
+import com.example.coffe.ui.component.BottomNavbar
 
 @Composable
 fun CoffeeAppUI() {
+    val coffeeItems = listOf(
+        CoffeeItemData("Caffe Mocha", "Deep Foam", "$4.53", R.drawable.caffemocha),
+        CoffeeItemData("Flat White", "Espresso", "$3.53", R.drawable.flatwhite),
+        CoffeeItemData("Cappuccino", "Milk Foam", "$3.53", R.drawable.cappucino),
+        CoffeeItemData("Espresso", "Strong", "$2.53", R.drawable.espresso)
+    )
+
     Box(modifier = Modifier.fillMaxSize()) {
         // Black background box
         Box(
@@ -126,8 +137,8 @@ fun CoffeeAppUI() {
                         style = TextStyle(fontSize = 14.sp)
                     )
                 }
-
-                // Icon Row
+                Spacer(modifier = Modifier.width(4.dp))
+                // filter button
                 Row(
                     horizontalArrangement = Arrangement.spacedBy(10.dp, Alignment.CenterHorizontally),
                     verticalAlignment = Alignment.CenterVertically,
@@ -153,15 +164,15 @@ fun CoffeeAppUI() {
                     .fillMaxWidth()
                     .padding(start = 16.dp, end = 16.dp)
             ){
-            Image(
-                painter = painterResource(id = R.drawable.banner),
-                contentDescription = null,
-                contentScale = ContentScale.Crop,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(150.dp)
-                    .clip(RoundedCornerShape(16.dp))
-            )
+                Image(
+                    painter = painterResource(id = R.drawable.banner),
+                    contentDescription = null,
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(150.dp)
+                        .clip(RoundedCornerShape(16.dp))
+                )
             }
 
             Spacer(modifier = Modifier.height(16.dp))
@@ -173,47 +184,62 @@ fun CoffeeAppUI() {
                     .fillMaxWidth()
                     .padding(start = 16.dp, end = 16.dp)
             ){
-            LazyRow {
-                items(categories) { category ->
-                    Text(
-                        text = category,
-                        modifier = Modifier
-                            .padding(horizontal = 4.dp, vertical = 4.dp)
-                            .background(if (category == "All Coffee") Color(0xFFC67C4E) else Color.White, RoundedCornerShape(6.dp))
-                            .padding(horizontal = 16.dp, vertical = 8.dp),
-                        color = if (category == "All Coffee") Color.White else Color.Black
-                    )
+                LazyRow {
+                    items(categories) { category ->
+                        Text(
+                            text = category,
+                            modifier = Modifier
+                                .padding(horizontal = 4.dp, vertical = 4.dp)
+                                .background(if (category == "All Coffee") Color(0xFFC67C4E) else Color.White, RoundedCornerShape(6.dp))
+                                .padding(horizontal = 16.dp, vertical = 8.dp),
+                            color = if (category == "All Coffee") Color.White else Color.Black
+                        )
+                    }
                 }
-            }
             }
 
             Spacer(modifier = Modifier.height(16.dp))
 
             // Coffee Items
-            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                CoffeeItem(name = "Caffe Mocha", type = "Deep Foam", price = "$4.53")
-                CoffeeItem(name = "Flat White", type = "Espresso", price = "$3.53")
-            }
+            LazyVerticalGrid(
+                columns = GridCells.Fixed(2),
+                modifier = Modifier.padding(horizontal = 16.dp),
+                content = {
+                    items(coffeeItems) { item ->
+                        CoffeeItem(name = item.name, type = item.type, price = item.price, imageResId = item.imageResId)
+                    }
+                }
+            )
         }
+
+        // Bottom Navbar
+        BottomNavbar(modifier = Modifier.align(Alignment.BottomCenter))
     }
 }
 
+data class CoffeeItemData(val name: String, val type: String, val price: String, val imageResId:Int)
+
 @Composable
-fun CoffeeItem(name: String, type: String, price: String) {
+fun CoffeeItem(name: String, type: String, price: String, imageResId: Int) {
     Column(
         modifier = Modifier
-            .width(150.dp)
+            .padding(8.dp)
             .background(Color.White, RoundedCornerShape(15.dp))
             .padding(8.dp)
     ) {
-        Box(
+        Image(
+            painter = painterResource(id = imageResId),
+            contentDescription = null,
+            contentScale = ContentScale.Crop,
             modifier = Modifier
-                .height(100.dp)
+                .requiredHeight(128.dp)
+                .requiredWidth(140.dp)
                 .fillMaxWidth()
-                .background(Color.Gray, RoundedCornerShape(15.dp))
+                .clip(RoundedCornerShape(15.dp))
         )
         Spacer(modifier = Modifier.height(8.dp))
         Text(name, fontWeight = FontWeight.Bold, fontSize = 16.sp)
+        Spacer(modifier = Modifier.height(6.dp))
         Text(type, color = Color.Gray, fontSize = 12.sp)
         Spacer(modifier = Modifier.height(8.dp))
         Row(
@@ -221,14 +247,22 @@ fun CoffeeItem(name: String, type: String, price: String) {
             horizontalArrangement = Arrangement.SpaceBetween,
             modifier = Modifier.fillMaxWidth()
         ) {
-            Text(price, fontWeight = FontWeight.Bold)
+            Text(price, fontWeight = FontWeight.Bold, fontSize = 18.sp)
             Box(
                 modifier = Modifier
-                    .size(24.dp)
-                    .background(Color(0xFFD7BFAE), CircleShape)
+                    .size(32.dp)
+                    .clip(RoundedCornerShape(8.dp))
+                    .background(Color(0xFFC67C4E))
                     .clickable {}
             ) {
-                Text("+", color = Color.White, modifier = Modifier.align(Alignment.Center))
+                Icon(
+                    painter = painterResource(id = R.drawable.plus),
+                    contentDescription = "Add to cart",
+                    tint = Color.White,
+                    modifier = Modifier
+                        .size(16.dp)
+                        .align(Alignment.Center)
+                )
             }
         }
     }
@@ -236,6 +270,6 @@ fun CoffeeItem(name: String, type: String, price: String) {
 
 @Preview(showBackground = true)
 @Composable
-fun homescreen2Preview() {
+fun CoffeeAppUIPreview() {
     CoffeeAppUI()
 }
